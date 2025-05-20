@@ -14,7 +14,7 @@ export { asyncHandler }
 //    }
 //    catch(err){
 //     res.status(err.code || 500).json({
-//         sucess:false,
+//         success:false,
 //         message:err.message
 //     })
 //    }
