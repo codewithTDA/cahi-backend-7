@@ -9,7 +9,7 @@ class ApiError extends Error {
         this.message = message
         this.success = false
         this.errors = errors
-
+        // this.status = statusCode >= 400 && statusCode < 500 ? 'fail' : "error";
         if (stack) {
             this.stack = this.stack
         }
@@ -18,5 +18,4 @@ class ApiError extends Error {
         }
     }
 }
-
 export { ApiError }
