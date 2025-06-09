@@ -21,6 +21,9 @@ const generateAccessAndRefereshTokens = async (userId) => {
               throw new ApiError(500, "something wend wrong while generating access and refresh token")
        }
 }
+const gatHomePage= asyncHandler(async (req,res)=>{
+     res.write("Sandeep")
+})
 const registerUser = asyncHandler(async (req, res) => {
        //remove password and refresh token field from response
        //get user details from frontend
