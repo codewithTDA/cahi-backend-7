@@ -11,9 +11,7 @@ router.route("/register").post(
     registerUser
 )
 
-router.get('/home', (req, res) => {
-  res.send('List of users');
-});
+router.route("/home").get(getCurrentUser)
 router.route("/login").post(loginUser)
 //securd routes
 router.route("/logout").post(verifyJWT, logoutUser)
