@@ -10,7 +10,10 @@ router.route("/register").post(
     ]),
     registerUser
 )
-router.route("/").get(gatHomePage)
+
+router.get('/home', (req, res) => {
+  res.send('List of users');
+});
 router.route("/login").post(loginUser)
 //securd routes
 router.route("/logout").post(verifyJWT, logoutUser)
