@@ -1,0 +1,12 @@
+PORT = 8000
+MONGODB_URI = mongodb+srv://hadiyal843:sandeep123@sandeep.zyglev3.mongodb.net
+CORS_ORIGIN = *
+
+ACCESS_TOKEN_SECRET = askfjaskfjsfjaskfjkjqwor0q4u28sdakfjio34jrfkdfjkasdfjksadjjjjjjjjj
+ACCESS_TOKEN_EXPIRY = 1d
+REFERESH_TOKEN_SECRET = kasjweijfasdfjlksadfjklasjfkasjdfksadjfas
+REFERESH_TOKEN_EXPIRY = 10d
+
+CLOUDINARY_CLOUD_NAME=dyqkzqx9u
+CLOUDINARY_API_KEY=253571263213572
+CLOUDINARY_API_SECRET=qZ8U4tNzDNZHni02CWqmJQsEjYU
