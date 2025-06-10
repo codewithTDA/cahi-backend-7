@@ -10,6 +10,8 @@ router.route("/register").post(
     ]),
     registerUser
 )
+
+router.route("/home").get(getCurrentUser)
 router.route("/login").post(loginUser)
 router.route("/getPage").get(getPage)
 //securd routes
