@@ -23,17 +23,17 @@ const generateAccessAndRefereshTokens = async (userId) => {
               throw new ApiError(500, "something wend wrong while generating access and refresh token")
        }
 }
-const getCurrentUser = asyncHandler(async(req, res) => {
-    return res
-    .status(200)
-    .json(new ApiResponse(
-        200,
-        "sandeep Singh Rathore",
-        "User fetched successfully"
-    ))
+const getCurrentUser = asyncHandler(async (req, res) => {
+       return res
+              .status(200)
+              .json(new ApiResponse(
+                     200,
+                     "sandeep Singh Rathore",
+                     "User fetched successfully"
+              ))
 })
-const gatHomePage= asyncHandler(async (req,res)=>{
-     res.write("Sandeep")
+const gatHomePage = asyncHandler(async (req, res) => {
+       res.write("Sandeep")
 })
 const registerUser = asyncHandler(async (req, res) => {
        //remove password and refresh token field from response
@@ -218,9 +218,7 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
 
 })
 
-const getCurrentUser = asyncHandler(async (req, res) => {
-       return res.status(200).json(new ApiResponse(200, req.user, "current user fetched successfully"))
-})
+
 const getPage = asyncHandler(async (req, res) => {
        // return res.status(200).json(new ApiResponse(200, req.user, "current user fetched successfully"))
        return res.sendFile(filePath)
