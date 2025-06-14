@@ -32,9 +32,7 @@ const getCurrentUser = asyncHandler(async (req, res) => {
                      "User fetched successfully"
               ))
 })
-const gatHomePage = asyncHandler(async (req, res) => {
-       res.write("Sandeep")
-})
+
 const registerUser = asyncHandler(async (req, res) => {
        //remove password and refresh token field from response
        //get user details from frontend
@@ -224,6 +222,10 @@ const getPage = asyncHandler(async (req, res) => {
        // return res.status(200).json(new ApiResponse(200, req.user, "current user fetched successfully"))
        return res.sendFile(filePath)
 })
+const good = asyncHandler(async (req, res) => {
+       // return res.status(200).json(new ApiResponse(200, req.user, "current user fetched successfully"))
+       return res.sendFile(filePath/good.html)
+})
 const updateAccountDetails = asyncHandler(async (req, res) => {
        const { fullName, email } = req.body
        if (!fullName || !email) {
@@ -253,4 +255,4 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
 
 
 })
-export { registerUser, loginUser, logoutUser, refreshAccessToken, changeCurrentPassword, getCurrentUser, updateAccountDetails, getPage }
+export { registerUser, loginUser, logoutUser, refreshAccessToken, changeCurrentPassword, getCurrentUser, updateAccountDetails, getPage,good }
