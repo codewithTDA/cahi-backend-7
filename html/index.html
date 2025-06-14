@@ -9,39 +9,37 @@
 
 <body>
     <h1>This is our html page</h1>
-    <form action="/src/app.js" method="post" id="myForm" enctype="multipart/form-data">
-        <input type="text" name="fullname" placeholder="fullName" id="">
+    <form action="/api/v1/users/register" method="post" id="myForm" enctype="multipart/form-data">
+        <input type="text" name="fullName" placeholder="fullName" id="">
         <input type="email" name="email" placeholder="email" id="">
         <input type="text" name="username" placeholder="username" id="">
         <input type="text" name="password" placeholder="password" id="">
         <input type="file" name="avatar" id="">
-        <input type="file" name="cover" id="">
-        <button id="submit">submit</button>
+        <input type="file" name="coverImage" id="">
+        <button type="submit">submit</button>
     </form>
     <script>
-        const form = document.getElementById('myForm');
-        const formData = new FormData(form);
-        const fullname = formData.get('fullname');
-        const email = formData.get('email');
-        const username = formData.get('username');
-        const password = formData.get('password');
-        const button = document.getElementById("submit")
-        button.addEventListener((e) => {
+        async function submitData() {
             e.preventDefault();
+            const button = document.getElementById(" submit")
+
+
             const form = document.getElementById('myForm');
             const formData = new FormData(form);
-            const fullname = formData.get('fullname');
+            const fullName = formData.get('fullName');
             const email = formData.get('email');
             const username = formData.get('username');
             const password = formData.get('password');
-            console.log(username, email, fullname, password);
+            const data = { "fullName": fullName, email, username, password }
+            console.log(username, email, fullName, password);
 
-            const result = await('http://localhost:8000/api/v1/users/register', {
+            const result = await fetch('http://localhost:8000/api/v1/users/register', {
                 method: "POST",
-                body: JSON.stringify({}),
+                body: JSON.stringify(data),
             })
 
-        })
+
+        }
     </script>
 </body>
 
